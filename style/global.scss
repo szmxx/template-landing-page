@@ -1,0 +1,19 @@
+@use './theme/index.scss';
+@use './common/mixin' as *;
+
+/* stylelint-disable-next-line selector-id-pattern */
+html,
+body,
+#__nuxt,
+#nuxt-test {
+  @include scrollbar;
+  @apply w-full h-full overflow-hidden bg-default text-color font-sans p-0 m-0 text-base;
+}
+
+*,
+::before,
+::after {
+  -webkit-tap-highlight-color: transparent;
+
+  @apply border-color outline-none;
+}

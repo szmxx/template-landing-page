@@ -1,0 +1,112 @@
+{
+  "extends": ["@commitlint/config-conventional"],
+  "rules": {
+    "type-empty": [2, "never"],
+    "subject-empty": [2, "never"],
+    "scope-empty": [0],
+    "scope-enum": [2, "always", ["core", "style", "docs", "test", "server"]]
+  },
+  "prompt": {
+    "settings": {
+      "enableMultipleScopes": true,
+      "scopeEnumSeparator": ","
+    },
+    "messages": {
+      "skip": "跳过",
+      "max": "最大 %d 字符",
+      "min": "至少 %d 字符",
+      "emptyWarning": "不能为空",
+      "upperLimitWarning": "超过限制",
+      "lowerLimitWarning": "低于限制"
+    },
+    "questions": {
+      "type": {
+        "description": "提交类型",
+        "enum": {
+          "feat": {
+            "description": "新功能",
+            "title": "Features",
+            "emoji": "✨"
+          },
+          "fix": {
+            "description": "bug修复",
+            "title": "Bug Fixes",
+            "emoji": "🐛"
+          },
+          "docs": {
+            "description": "文档变更",
+            "title": "Documentation",
+            "emoji": "📚"
+          },
+          "style": {
+            "description": "样式更新",
+            "title": "Styles",
+            "emoji": "💎"
+          },
+          "refactor": {
+            "description": "代码重构",
+            "title": "Code Refactoring",
+            "emoji": "📦"
+          },
+          "perf": {
+            "description": "性能优化",
+            "title": "Performance Improvements",
+            "emoji": "🚀"
+          },
+          "test": {
+            "description": "测试变更",
+            "title": "Tests",
+            "emoji": "🚨"
+          },
+          "build": {
+            "description": "构建相关",
+            "title": "Builds",
+            "emoji": "🛠"
+          },
+          "ci": {
+            "description": "持续集成",
+            "title": "Continuous Integrations",
+            "emoji": "⚙️"
+          },
+          "chore": {
+            "description": "其他变更",
+            "title": "Chores",
+            "emoji": "♻️"
+          },
+          "revert": {
+            "description": "撤销提交",
+            "title": "Reverts",
+            "emoji": "🗑"
+          }
+        }
+      },
+      "scope": {
+        "description": "作用域"
+      },
+      "subject": {
+        "description": "描述"
+      },
+      "body": {
+        "description": "提供更长的描述"
+      },
+      "isBreaking": {
+        "description": "是否破坏性变更?"
+      },
+      "breakingBody": {
+        "description": "A BREAKING CHANGE commit requires a body. Please enter a longer description of the commit itself"
+      },
+      "breaking": {
+        "description": "Describe the breaking changes"
+      },
+      "isIssueAffected": {
+        "description": "Does this change affect any open issues?"
+      },
+      "issuesBody": {
+        "description": "If issues are closed, the commit requires a body. Please enter a longer description of the commit itself"
+      },
+      "issues": {
+        "description": "Add issue references (e.g. \"fix #123\", \"re #123\".)"
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@mixin scrollbar {
+  & {
+    /* firefox */
+
+    /* 轨道和滑块颜色 */
+    scrollbar-color: transparent transparent;
+    scrollbar-width: thin;
+    overscroll-behavior: none;
+
+    /* IE */
+
+    /* 滚动条滑块按钮的颜色 */
+    scrollbar-face-color: transparent;
+
+    /* 滚动条整体颜色 */
+    scrollbar-highlight-color: #fff;
+
+    /* 滚动条轨道颜色 */
+    scrollbar-track-color: #fff;
+
+    /* 滚动条基准颜色 */
+    scrollbar-base-color: #fff;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  &::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: transparent;
+  }
+}

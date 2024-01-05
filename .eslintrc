@@ -1,0 +1,74 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "plugin:vue/vue3-recommended",
+    "eslint:recommended",
+    "@vue/typescript/recommended",
+    "@vue/prettier"
+  ],
+  "plugins": ["vue"],
+  "settings": {
+    "import/resolver": {
+      "node": { "extensions": [".js", ".mjs", ".ts", ".d.ts", ".tsx"] }
+    }
+  },
+  "overrides": [
+    {
+      "files": ["*.json", "*.json5", "*.jsonc"],
+      "parser": "jsonc-eslint-parser"
+    },
+    {
+      "files": ["*.ts", "*.vue"],
+      "rules": {
+        "no-undef": "off"
+      }
+    },
+    {
+      "files": ["**/__tests__/**"],
+      "rules": {
+        "no-console": "off",
+        "vue/one-component-per-file": "off"
+      }
+    },
+    {
+      "files": ["*.d.ts"],
+      "rules": {
+        "import/no-duplicates": "off"
+      }
+    },
+    {
+      "files": ["*.js"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off"
+      }
+    },
+    {
+      "files": ["*.vue"],
+      "parser": "vue-eslint-parser",
+      "parserOptions": {
+        "parser": "@typescript-eslint/parser",
+        "extraFileExtensions": [".vue"],
+        "ecmaVersion": "latest",
+        "ecmaFeatures": {
+          "jsx": true
+        }
+      },
+      "rules": {
+        "no-undef": "off"
+      }
+    }
+  ],
+  "rules": {
+    "no-console": ["warn", { "allow": ["error"] }],
+    "no-debugger": "warn",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "vue/multi-word-component-names": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "prefer-const": "off"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "Vue.volar",
+    "Vue.vscode-typescript-vue-plugin",
+    "stylelint.vscode-stylelint",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "EditorConfig.EditorConfig",
+    "ZixuanChen.vitest-explorer",
+    "antfu.unocss",
+    "antfu.vite",
+    "antfu.iconify"
+  ]
+}

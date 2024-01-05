@@ -1,0 +1,107 @@
+{
+  "name": "template-landing-page",
+  "private": false,
+  "description": "template for landing page",
+  "packageManager": "pnpm@8.6.11",
+  "version": "1.0.0",
+  "funding": "https://github.com/sponsors/szmxx",
+  "homepage": "https://github.com/szmxx/template-landing-page#readme",
+  "license": "MIT",
+  "type": "module",
+  "author": {
+    "name": "cola",
+    "email": "szmintel@gmail.com",
+    "url": "https://aitimi.cn"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/szmxx/template-landing-page",
+    "directory": "."
+  },
+  "bugs": {
+    "url": "https://github.com/szmxx/template-landing-page/issues"
+  },
+  "keywords": [
+    "template",
+    "nuxt3",
+    "vue3",
+    "vite"
+  ],
+  "scripts": {
+    "build": "nuxi build --dotenv .env.production",
+    "dev": "nuxi dev --dotenv .env.development --host",
+    "dev:pwa": "VITE_PLUGIN_PWA=true nuxi dev",
+    "start": "node .output/server/index.mjs",
+    "typecheck": "vue-tsc --noEmit",
+    "postinstall": "nuxi prepare",
+    "generate": "nuxi generate",
+    "analyze": "nuxi analyze",
+    "start:generate": "npx serve .output/public",
+    "test:unit": "vitest",
+    "test:js-dom": "VITEST_DOM_ENV=js-dom pnpm test:unit --run",
+    "test": "pnpm test:js-dom --api.port 3060 ",
+    "preinstall": "husky install",
+    "lint": "eslint --ext .ts,vue,tsx --ignore-path .gitignore .",
+    "style": "stylelint ./**/*.{css,scss,vue}",
+    "tslint": "vue-tsc --noEmit",
+    "commit": "git-cz",
+    "changelogen": "changelogen --bump"
+  },
+  "dependencies": {
+    "@iconify-json/ion": "^1.1.12",
+    "@nuxtseo/module": "2.0.0-beta.15",
+    "@pinia/nuxt": "^0.4.11",
+    "@vueuse/nuxt": "^10.3.0",
+    "dayjs": "^1.11.9",
+    "lodash-es": "^4.17.21",
+    "nuxt": "^3.7.4"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
+    "@commitlint/cz-commitlint": "^17.7.1",
+    "@nuxt/devtools": "^0.7.4",
+    "@nuxtjs/color-mode": "^3.3.0",
+    "@nuxtjs/i18n": "8.0.0-rc.4",
+    "@types/lodash-es": "^4.17.9",
+    "@unocss/nuxt": "^0.54.1",
+    "@vite-pwa/nuxt": "^0.1.0",
+    "@vue/eslint-config-prettier": "^8.0.0",
+    "@vue/eslint-config-typescript": "^11.0.3",
+    "changelogen": "^0.5.5",
+    "commitizen": "^4.3.0",
+    "eslint": "^8.46.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-vue": "^9.17.0",
+    "husky": "^8.0.3",
+    "jsdom": "^22.1.0",
+    "jsonc-eslint-parser": "^2.3.0",
+    "lint-staged": "^14.0.1",
+    "nuxt-vitest": "^0.10.2",
+    "pinia": "^2.1.6",
+    "postcss-html": "^1.5.0",
+    "prettier": "^3.0.3",
+    "sass": "^1.66.1",
+    "stylelint": "^15.10.3",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-config-standard-scss": "^11.0.0",
+    "stylelint-config-standard-vue": "^1.0.0",
+    "stylelint-order": "^6.0.3",
+    "stylelint-prettier": "^4.0.2",
+    "typescript": "^5.1.6",
+    "vitest": "^0.34.2",
+    "vitest-environment-nuxt": "^0.10.2",
+    "vue-tsc": "^1.8.8"
+  },
+  "lint-staged": {
+    "src/**/*.{json,md,vue}": "prettier -w -u",
+    "docs/**/*.{json,md,vue}": "prettier -w -u",
+    "*.{js,jsx,ts,tsx,vue}": "npm run lint --fix",
+    "*.{less,sass,css,scss,vue}": "npm run style --fix"
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
+  }
+}
