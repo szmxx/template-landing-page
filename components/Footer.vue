@@ -1,8 +1,6 @@
 <template>
-  <div class="flex items-center justify-between gap-x-4">
-    <div class="text-hint">
-      Copyright © 2023 - PRESENT uShare, All rights reserved
-    </div>
+  <div class="flex items-center justify-between gap-4 py-4 <sm:flex-col">
+    <div class="text-hint">Copyright © 2023 - PRESENT uShare</div>
     <div class="flex items-center gap-4">
       <DarkToggle />
       <LangToggle />

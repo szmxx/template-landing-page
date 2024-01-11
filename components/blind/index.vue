@@ -19,6 +19,7 @@
       class="blind absolute top-0 center h-full"
       :style="{ transform: `translate3d(${transform - 15}px, 0, 0)` }"
       @mousedown="onMousedown"
+      @touchstart="onTouchstart"
     >
       <div class="p-0.5 bg-color rounded z-9 w-30px flex cursor-pointer">
         <div class="i-ion-arrow-left-b"></div>
@@ -56,6 +57,21 @@
     const { clientX } = evt
     const { left, width } = container.value.getBoundingClientRect()
     transform.value = Math.max(0, Math.min(clientX - left, width))
+  }
+  function onTouchstart() {
+    document.addEventListener('touchmove', onTouchmove)
+    document.addEventListener('touchend', onTouchend)
+  }
+  function onTouchmove(evt: TouchEvent) {
+    const { clientX } = evt.touches[0]
+    // eslint-disable-next-line no-unsafe-optional-chaining
+    const { left, width } = container?.value?.getBoundingClientRect?.()
+    transform.value = Math.max(0, Math.min(clientX - left, width))
+  }
+
+  function onTouchend() {
+    document.removeEventListener('touchmove', onTouchmove)
+    document.removeEventListener('touchend', onTouchend)
   }
 
   function onMouseup() {

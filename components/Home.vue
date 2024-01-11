@@ -1,6 +1,6 @@
 <template>
   <main class="py-16 flex gap-16 flex-col <lg:py-4">
-    <section class="flex justify-between gap-32 <lg:(flex-col p-4)">
+    <section class="flex justify-between gap-32 <lg:(flex-col p-4 gap-16)">
       <div class="flex-1 flex flex-col gap-6 relative">
         <h1 class="text-48px line-height-1em font-bold title">
           {{ SiteDescription }}
@@ -61,18 +61,19 @@
         Get Started
       </button>
     </section>
+    <AutoUp></AutoUp>
   </main>
 </template>
 
 <script setup lang="ts">
   import { SiteDescription, SiteIntro } from '~/config'
   const UserList = [
-    '/images/a.avif',
-    '/images/b.avif',
-    '/images/c.avif',
+    '/images/j.jpg',
+    '/images/d.jpg',
+    '/images/k.jpg',
+    '/images/l.jpg',
     '/images/d.avif',
-    '/images/e.avif',
-    '/images/f.avif',
+    '/images/m.jpg',
   ]
 </script>
 

@@ -57,7 +57,7 @@
           v-for="(item, index) in list"
           :key="item.url + index"
           :data-index="index"
-          class="w-2 h-2 bg-color rounded-1/2 cursor-pointer transition-all"
+          class="w-2.5 h-2.5 bg-color rounded-1/2 cursor-pointer transition-all"
           :class="{ 'w-6 rounded! bg-primary': current - 1 === index }"
         ></li>
       </ul>

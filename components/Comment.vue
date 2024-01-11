@@ -1,6 +1,8 @@
 <template>
   <section class="w-full center flex-col gap-8">
-    <h2 class="text-32px"><a id="testimonials">Customer Testimonials</a></h2>
+    <h2 class="text-32px line-height-1em text-center">
+      <a id="testimonials">Customer Testimonials</a>
+    </h2>
     <p>Thank you all for supporting uShare from the start!</p>
     <div class="flex gap-4 w-full justify-start flex-wrap">
       <UserCard

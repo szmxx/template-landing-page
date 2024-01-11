@@ -1,6 +1,8 @@
 <template>
   <section class="w-full center flex-col gap-8">
-    <h2 class="text-32px"><a id="faq">Frequently Asked Questions</a></h2>
+    <h2 class="text-32px line-height-1em text-center">
+      <a id="faq">Frequently Asked Questions</a>
+    </h2>
     <p>Everything you need to know.</p>
     <div class="flex flex-col justify-start w-full">
       <div

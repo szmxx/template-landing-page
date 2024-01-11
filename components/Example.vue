@@ -15,11 +15,7 @@
       </div>
       <Swiper class="w-90 h-90" :list="ImgList">
         <template #markdown>
-          <Blind
-            class="w-full h-90 overflow-hidden"
-            :a="aurl"
-            :b="burl"
-          ></Blind>
+          <Blind class="w-90 h-90 overflow-hidden" :a="aurl" :b="burl"></Blind>
         </template>
         <template #code="{ data }">
           <img :src="data.url" class="object-contain" />

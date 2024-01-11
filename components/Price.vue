@@ -1,6 +1,8 @@
 <template>
   <section class="w-full center flex-col gap-8">
-    <h2 class="text-32px"><a id="pricing">Pricing</a></h2>
+    <h2 class="text-32px line-height-1em text-center">
+      <a id="pricing">Pricing</a>
+    </h2>
     <p>Choose the plan that fits your needs</p>
     <div class="w-full center <sm:flex-col gap-8">
       <div
