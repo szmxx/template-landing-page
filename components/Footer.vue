@@ -1,18 +1,19 @@
-<!--
- * @Author: cola
- * @Date: 2023-08-06 17:42:54
- * @LastEditors: cola
- * @Description:
--->
 <template>
-  <div class="center gap-x-4">
-    <NuxtLink i-ion-home to="/" />
-    <a
-      i-ion-logo-github
-      href="https://github.com/szmxx/template-nuxt3"
-      target="_blank"
-    />
-    <DarkToggle />
-    <LangToggle />
+  <div class="flex items-center justify-between gap-x-4">
+    <div class="text-hint">
+      Copyright © 2023 - PRESENT uShare, All rights reserved
+    </div>
+    <div class="flex items-center gap-4">
+      <DarkToggle />
+      <LangToggle />
+      <a
+        href="https://discord.gg/aZarY8WF2b"
+        target="_blank"
+        class="i-logos-discord-icon cursor-pointer text-lg"
+      ></a>
+    </div>
   </div>
 </template>
+<script lang="ts" setup>
+  const Author = 'szmx'
+</script>

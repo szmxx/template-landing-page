@@ -1,16 +1,9 @@
-<!--
- * @Author: cola
- * @Date: 2023-08-06 17:42:54
- * @LastEditors: cola
- * @Description:
--->
-<script setup>
-  const { t } = useI18n()
-</script>
 <template>
-  <main class="center h-full w-full flex-col gap-y-2">
-    <slot />
+  <div class="h-full w-full bg-default lg:px-48 <lg:px-24 <sm:px-4">
+    <Header></Header>
+    <slot></slot>
+
     <Footer />
-    <div class="text-auxiliary">[{{ t('default_layout') }}]</div>
-  </main>
+    <Background class="absolute top-0 left-0 pointer-events-none"></Background>
+  </div>
 </template>

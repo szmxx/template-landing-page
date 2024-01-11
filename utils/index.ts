@@ -1,7 +1,9 @@
-/*
- * @Author: cola
- * @Date: 2023-08-22 17:02:42
- * @LastEditors: cola
- * @Description:
- */
 export {}
+
+export function injectStrict<T>(key: InjectionKey<T>, fallback?: T) {
+  const resolved = inject(key, fallback)
+  if (!resolved) {
+    console.error(`Could not resolve ${key.description}`)
+  }
+  return resolved
+}

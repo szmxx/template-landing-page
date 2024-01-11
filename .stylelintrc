@@ -99,7 +99,18 @@
     {
       "files": ["*.(html|vue)", "**/*.(html|vue)"],
       "rules": {
-        "unit-allowed-list": ["em", "rem", "px", "%", "s", "vw", "vh", "ms"]
+        "unit-allowed-list": [
+          "em",
+          "rem",
+          "px",
+          "%",
+          "s",
+          "vw",
+          "vh",
+          "ms",
+          "deg",
+          "turn"
+        ]
       },
       "customSyntax": "postcss-html"
     }

@@ -7,7 +7,7 @@ body,
 #__nuxt,
 #nuxt-test {
   @include scrollbar;
-  @apply w-full h-full overflow-hidden bg-default text-color font-sans p-0 m-0 text-base;
+  @apply w-full h-full  bg-default text-color font-sans p-0 m-0 text-base;
 }
 
 *,
